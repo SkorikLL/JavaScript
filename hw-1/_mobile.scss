@@ -4,4 +4,40 @@
     padding-right: 16px;
   }
 
+  .top {
+    height: 735px;
+  }
+
+  .header {
+    &__heading {
+      text-align: center;
+      font-size: 32px;
+    }
+    &__slogan {
+      width: auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 22px;
+      &_bold {
+        font-weight: 700;
+      }
+    }
+    .top-button {
+      display: flex;
+      justify-content: center;
+    }
+    &__button {
+      margin-top: 32px;
+    }
+  }
+
+  .play-box {
+    padding-top: 128px;
+    background-color: #000915;
+    .play {
+      &__item {
+        width: 100vw;
+      }
+    }
+  }
 }

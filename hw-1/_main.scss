@@ -9,8 +9,8 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
 }
 
 a {
@@ -71,12 +71,17 @@ a {
   background-color: #000915;
   .play {
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
     &__item {
       width: 379px;
       height: 300px;
       border-radius: 16px;
       border: 3px solid black;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
     &__item-link {
       width: 100%;
@@ -89,7 +94,6 @@ a {
       font-style: normal;
       font-weight: 600;
       line-height: 32px;
-
       padding-left: 32px;
       padding-bottom: 32px;
       transition: backdrop-filter 0.4s;
