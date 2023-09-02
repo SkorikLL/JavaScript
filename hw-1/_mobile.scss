@@ -7,26 +7,27 @@
   .top {
     height: 735px;
   }
+  .slogan {
+    width: auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    &_bold {
+      font-weight: 700;
+    }
+  }
 
   .header {
     &__heading {
       text-align: center;
       font-size: 32px;
     }
-    &__slogan {
-      width: auto;
-      text-align: center;
-      font-size: 14px;
-      line-height: 22px;
-      &_bold {
-        font-weight: 700;
-      }
-    }
-    .top-button {
+
+    &__button {
       display: flex;
       justify-content: center;
     }
-    &__button {
+    &_link {
       margin-top: 32px;
     }
   }
@@ -39,5 +40,27 @@
         width: 100vw;
       }
     }
+  }
+
+  .mid-content {
+    margin-top: 178px;
+    align-content: space-between;
+    flex-direction: column;
+    &__slogan {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &__button-link {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .heading-h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+  .mid-content__rights-img {
+    margin-top: 64px;
   }
 }

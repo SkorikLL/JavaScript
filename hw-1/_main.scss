@@ -6,6 +6,7 @@
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  background-color: #000915;
 }
 
 .center {
@@ -25,6 +26,37 @@ a {
   background-size: cover;
 }
 
+.slogan {
+  padding-top: 32px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  &_bold {
+    font-weight: 700;
+  }
+}
+
+.button {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 234px;
+  height: 48px;
+  border-radius: 30px;
+  background: #9c0332;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  &:hover {
+    background: #eb443f;
+  }
+}
+
 .header {
   &__heading {
     padding-top: 217px;
@@ -37,41 +69,16 @@ a {
   &__slogan {
     padding-top: 32px;
     width: 481px;
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 32px;
-    &_bold {
-      font-weight: 700;
-    }
-  }
-  &__button {
-    margin-top: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 234px;
-    height: 48px;
-    border-radius: 30px;
-    background: #9c0332;
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    &:hover {
-      background: #eb443f;
-    }
   }
 }
 
 .play-box {
   padding-top: 128px;
-  background-color: #000915;
+
   .play {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 32px;
     &__item {
       width: 379px;
@@ -112,4 +119,22 @@ a {
       background-image: url(img/play-3.jpg);
     }
   }
+}
+
+.mid-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 240px;
+  &__slogan {
+    width: 592px;
+  }
+}
+
+.heading-h2 {
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
