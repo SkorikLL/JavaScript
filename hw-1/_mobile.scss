@@ -43,9 +43,6 @@
   }
 
   .mid-content {
-    margin-top: 178px;
-    align-content: space-between;
-    flex-direction: column;
     &__slogan {
       padding-left: 16px;
       padding-right: 16px;
@@ -54,6 +51,18 @@
       display: flex;
       justify-content: center;
     }
+  }
+
+  .mid-content-first {
+    align-content: space-between;
+    flex-direction: column;
+    margin-top: 178px;
+  }
+
+  .mid-content-second {
+    margin-top: 136px;
+    align-content: space-between;
+    flex-direction: column-reverse;
   }
 
   .heading-h2 {
