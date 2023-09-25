@@ -4,8 +4,12 @@ function playInPuzzles() {
   const examinationNumber = (number) => {
     let flag = true;
     while (flag) {
-      if (isNaN(number) || number <= 0 || number > 12) {
-        number = Number(prompt("Вы ввели неправильное значение"));
+      if (isNaN(number) || number === "") {
+        number = prompt("Вы ввели неправильное значение");
+      } else if (number === null) {
+        alert("Пока!");
+        flag = false;
+        return number;
       } else {
         flag = false;
         return number;
@@ -48,7 +52,10 @@ function playInPuzzles() {
     }
   };
 
-  let numberMonth = Number(prompt("Введите номер месяца (от 1 до 12): "));
+  let numberMonth = prompt("Введите номер месяца (от 1 до 12): ");
   numberMonth = examinationNumber(numberMonth);
-  printSeason(numberMonth);
+
+  if (numberMonth !== null) {
+    printSeason(Number(numberMonth));
+  }
 }
