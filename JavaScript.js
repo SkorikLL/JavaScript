@@ -15,16 +15,17 @@ function exerciseFirst() {
 //Задание 2
 function exerciseSecond() {
   const printTextEven = (number) =>
-    number % 2 == 0 ? alert("Число четное") : alert("Число нечетное");
+    number % 2 === 0 ? alert("Число четное") : alert("Число нечетное");
 
   //Проверка четное число ввел пользователь или нет
   const examinationNumber = (number) => {
     let flag = true;
     while (flag) {
-      if (isNaN(number)) {
-        number = Number(
-          prompt("Вы ввели не число! Пожалуйста, введите любое число")
-        );
+      if (isNaN(number) || number === "") {
+        number = prompt("Вы ввели не число! Пожалуйста, введите любое число");
+      } else if (number === null) {
+        alert("Пока!");
+        flag = false;
       } else {
         printTextEven(number);
         flag = false;
@@ -32,7 +33,7 @@ function exerciseSecond() {
     }
   };
 
-  let number = Number(prompt("Пожалуйста, введите любое число"));
+  let number = prompt("Пожалуйста, введите любое число");
   examinationNumber(number);
 }
 
@@ -47,10 +48,12 @@ function exerciseThird() {
   const examinationNumber = (number) => {
     let flag = true;
     while (flag) {
-      if (isNaN(number)) {
-        number = Number(
-          prompt("Вы ввели не число! Пожалуйста, введите любое число")
-        );
+      if (isNaN(number) || number === "") {
+        number = prompt("Вы ввели не число! Пожалуйста, введите любое число");
+      } else if (number === null) {
+        alert("Пока!");
+        flag = false;
+        return number;
       } else {
         flag = false;
         return number;
@@ -58,11 +61,13 @@ function exerciseThird() {
     }
   };
 
-  let getNumberUser = Number(prompt("Пожалуйста, введите любое число"));
+  let getNumberUser = prompt("Пожалуйста, введите любое число");
   let trueNumber = examinationNumber(getNumberUser);
-  alertSquareNumber(trueNumber);
-  let result = returnSquareNumber(trueNumber);
-  console.log(result);
+  if (trueNumber !== null) {
+    alertSquareNumber(trueNumber);
+    let result = returnSquareNumber(trueNumber);
+    console.log(result);
+  }
 }
 
 //Задание 4
@@ -70,8 +75,12 @@ function exerciseFourth() {
   const examinationNumber = (number) => {
     let flag = true;
     while (flag) {
-      if (isNaN(number) || number < 0) {
-        number = Number(prompt("Вы ввели неправильное значение"));
+      if (isNaN(number) || number < 0 || number === "") {
+        number = prompt("Вы ввели неправильное значение");
+      } else if (number === null) {
+        alert("Пока!");
+        flag = false;
+        return number;
       } else {
         flag = false;
         return number;
@@ -83,23 +92,32 @@ function exerciseFourth() {
       ? alert("Привет, друг!")
       : alert("Добро пожаловать!");
 
-  let getYearsUser = Number(prompt("Сколько вам лет?"));
+  let getYearsUser = prompt("Сколько вам лет?");
   let trueNumber = examinationNumber(getYearsUser);
-  alertWelcomeOrHello(trueNumber);
+  if (trueNumber !== null) {
+    alertWelcomeOrHello(trueNumber);
+  }
 }
 
 //Задание 5
 function exerciseFifth() {
   const examinationNumber = (numberFirst, numberSecond) => {
-    if (isNaN(numberFirst) || isNaN(numberSecond)) {
+    if (
+      isNaN(numberFirst) ||
+      isNaN(numberSecond) ||
+      numberFirst === "" ||
+      numberSecond === ""
+    ) {
       alert("Одно или оба значения не являются числом");
+    } else if (numberFirst === null || numberSecond === null) {
+      alert("Пока!");
     } else {
       return alert(`Произведение данных чисел = ${numberFirst * numberSecond}`);
     }
   };
 
-  let getYearsUserFirst = Number(prompt("Введите первое число: "));
-  let getYearsUserSecond = Number(prompt("Введите второе число: "));
+  let getYearsUserFirst = prompt("Введите первое число: ");
+  let getYearsUserSecond = prompt("Введите второе число: ");
   examinationNumber(getYearsUserFirst, getYearsUserSecond);
 }
 
@@ -108,8 +126,12 @@ function exerciseSixth() {
   const examinationNumber = (number) => {
     let flag = true;
     while (flag) {
-      if (isNaN(number)) {
-        number = Number(prompt("Переданный параметр не является числом"));
+      if (isNaN(number) || number === "") {
+        number = prompt("Переданный параметр не является числом");
+      } else if (number === null) {
+        alert("Пока!");
+        flag = false;
+        return number;
       } else {
         flag = false;
         return number;
@@ -119,11 +141,14 @@ function exerciseSixth() {
   const alertSquareNumber = (number) =>
     alert(`${number} в кубе равняется ${Math.pow(number, 2)}`);
 
-  let getYearsUser = Number(prompt("Введите число: "));
+  let getYearsUser = prompt("Введите число: ");
   let trueNumber = examinationNumber(getYearsUser);
-  alertSquareNumber(trueNumber);
+  if (trueNumber !== null) {
+    alertSquareNumber(trueNumber);
+  }
 }
 
+//Задание 7
 function exerciseSeventh() {
   function getRectangleArea() {
     return `Площадь круга равна ${Math.round(
@@ -171,7 +196,7 @@ function exerciseSeventh() {
 //exerciseFifth();
 
 //Задание 6:
-//exerciseSixth();
+exerciseSixth();
 
 //Задание 7:
-exerciseSeventh();
+//exerciseSeventh();
