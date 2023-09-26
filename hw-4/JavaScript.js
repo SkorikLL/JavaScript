@@ -6,7 +6,7 @@ function exerciseFirst() {
   const n = 2;
 
   do {
-    alert("Привет");
+    console.log("Привет");
     i++;
   } while (i < n);
 }
@@ -61,15 +61,12 @@ function exerciseFifth() {
 
 //Задание 6
 function exerciseSixth() {
-  let firstFriday = 1;
+  let firstFriday = 4;
 
-  for (let index = 0; index < 5; index++) {
-    if (firstFriday <= 31) {
-      alert(
-        `Сегодня пятница, ${firstFriday}-е число. Необходимо подготовить отчет.`
-      );
-    }
-    firstFriday += 7;
+  for (firstFriday; firstFriday <= 31; firstFriday += 7) {
+    alert(
+      `Сегодня пятница, ${firstFriday}-е число. Необходимо подготовить отчет.`
+    );
   }
 }
 

@@ -23,7 +23,6 @@ a {
   background-image: url(img/topback.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .slogan {
@@ -126,11 +125,37 @@ a {
   width: 592px;
 }
 
+.mid-content-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/games-back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 276px;
+  padding-bottom: 288px;
+}
+
 .heading-h2 {
   color: #fff;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
+  line-height: normal;
+}
+
+.footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-footer {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
